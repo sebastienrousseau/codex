@@ -7,7 +7,7 @@ This document tracks the progress of ecosystem-wide enhancements.
 | Metric | Value |
 |--------|-------|
 | Total Repositories | 85 |
-| Using Pipelines CI | 33 |
+| Using Pipelines CI | 32 |
 | Using Commons | 29 |
 | Linting Standardized | 25+ |
 
@@ -66,7 +66,7 @@ The archived `serde_yml` and `libyml` crates affect 9 repos and contribute to 15
 
 **Status:** In Progress
 
-Migrated 7 Python repos to pipelines CI with ruff + mypy:
+Migrated 6 Python repos to pipelines CI with ruff + mypy:
 
 | Project | Package Manager | CI Status |
 |---------|-----------------|-----------|
@@ -76,7 +76,6 @@ Migrated 7 Python repos to pipelines CI with ruff + mypy:
 | bankstatementparser | Poetry | ✅ Migrated |
 | talkwave | Poetry | ✅ Migrated |
 | akande | setuptools (pip) | ✅ Migrated |
-| encryption-helper-python | Poetry | ✅ Migrated |
 
 **Standardized tooling:**
 - Ruff (linting + formatting, replaces flake8/black/isort)
@@ -109,7 +108,7 @@ Migrated 3 JS/TS repos to pipelines CI:
 |------|---------|--------|
 | codex | Architecture docs | ✅ Active |
 | commons | Shared Rust utilities | ✅ 29 adopters |
-| pipelines | CI/CD templates | ✅ 33 adopters (Rust + Python + Node) |
+| pipelines | CI/CD templates | ✅ 32 adopters (Rust + Python + Node) |
 | devkit | Developer tooling | ✅ Active |
 | pulse | Ecosystem monitoring | ✅ Enhanced |
 
@@ -130,6 +129,6 @@ Latest scan (2026-02-18):
 ## Next Actions
 
 1. **serde_yml rewrite** - Eliminate 151 vulnerabilities (P0)
-2. **Python audit** - ✅ Complete (7/8 repos migrated, pain001 already at standard)
+2. **Python audit** - ✅ Complete (6/7 repos migrated, pain001 already at standard)
 3. **JavaScript/TypeScript** - ✅ Complete (3 repos migrated)
 4. **Pulse dashboards** - Add Grafana visualizations
