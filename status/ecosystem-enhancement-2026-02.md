@@ -7,7 +7,7 @@ This document tracks the progress of ecosystem-wide enhancements.
 | Metric | Value |
 |--------|-------|
 | Total Repositories | 85 |
-| Using Pipelines CI | 23 |
+| Using Pipelines CI | 30 |
 | Using Commons | 29 |
 | Linting Standardized | 25+ |
 
@@ -64,11 +64,27 @@ The archived `serde_yml` and `libyml` crates affect 9 repos and contribute to 15
 
 ### Python Ecosystem Audit (P1)
 
-**Status:** Not started
+**Status:** In Progress
 
-- Apply Pain001 quality standards
-- Standardize on Poetry + ruff + mypy
-- 98% coverage requirement
+Migrated 7 Python repos to pipelines CI with ruff + mypy:
+
+| Project | Package Manager | CI Status |
+|---------|-----------------|-----------|
+| pulse | Hatch (pip) | ✅ Migrated |
+| euxis | Hatch (pip) | ✅ Migrated |
+| audiotext | Poetry | ✅ Migrated |
+| bankstatementparser | Poetry | ✅ Migrated |
+| talkwave | Poetry | ✅ Migrated |
+| akande | setuptools (pip) | ✅ Migrated |
+| encryption-helper-python | Poetry | ✅ Migrated |
+
+**Standardized tooling:**
+- Ruff (linting + formatting, replaces flake8/black/isort)
+- MyPy (strict type checking)
+- pytest-cov (80% coverage threshold)
+- Bandit (security scanning)
+
+**Reference standard:** pain001 (98% coverage, comprehensive CI)
 
 ### JavaScript/TypeScript Modernization (P2)
 
@@ -83,7 +99,7 @@ The archived `serde_yml` and `libyml` crates affect 9 repos and contribute to 15
 |------|---------|--------|
 | codex | Architecture docs | ✅ Active |
 | commons | Shared Rust utilities | ✅ 29 adopters |
-| pipelines | CI/CD templates | ✅ 23 adopters |
+| pipelines | CI/CD templates | ✅ 30 adopters (Rust + Python) |
 | devkit | Developer tooling | ✅ Active |
 | pulse | Ecosystem monitoring | ✅ Enhanced |
 
@@ -103,7 +119,7 @@ Latest scan (2026-02-18):
 
 ## Next Actions
 
-1. **serde_yml rewrite** - Eliminate 151 vulnerabilities
-2. **Python audit** - Apply quality standards
-3. **Expand pipelines** - Add Python/JS workflow templates
+1. **serde_yml rewrite** - Eliminate 151 vulnerabilities (P0)
+2. **Python audit** - ✅ 7/8 repos migrated (pain001 already at standard)
+3. **JavaScript/TypeScript** - Migrate repos to pipelines node-ci.yml
 4. **Pulse dashboards** - Add Grafana visualizations
