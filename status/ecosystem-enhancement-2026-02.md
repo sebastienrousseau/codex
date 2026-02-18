@@ -7,7 +7,7 @@ This document tracks the progress of ecosystem-wide enhancements.
 | Metric | Value |
 |--------|-------|
 | Total Repositories | 85 |
-| Using Pipelines CI | 30 |
+| Using Pipelines CI | 33 |
 | Using Commons | 29 |
 | Linting Standardized | 25+ |
 
@@ -88,10 +88,20 @@ Migrated 7 Python repos to pipelines CI with ruff + mypy:
 
 ### JavaScript/TypeScript Modernization (P2)
 
-**Status:** Not started
+**Status:** In Progress
 
-- Migrate to TypeScript where applicable
-- Modern build tooling (Vite, ESBuild)
+Migrated 3 JS/TS repos to pipelines CI:
+
+| Project | Framework | Package Manager | CI Status |
+|---------|-----------|-----------------|-----------|
+| sine-wave-generator | Webpack/Jest | pnpm | ✅ Migrated |
+| dotfiles.github.io | VuePress | pnpm | ✅ Migrated |
+| password-generator-pro | Tauri/Svelte/Vite | pnpm | ✅ Migrated (Rust + Node) |
+
+**Tooling:**
+- ESLint + Prettier
+- Jest/Vitest for testing
+- TypeScript where applicable
 
 ## Infrastructure Repos
 
@@ -99,7 +109,7 @@ Migrated 7 Python repos to pipelines CI with ruff + mypy:
 |------|---------|--------|
 | codex | Architecture docs | ✅ Active |
 | commons | Shared Rust utilities | ✅ 29 adopters |
-| pipelines | CI/CD templates | ✅ 30 adopters (Rust + Python) |
+| pipelines | CI/CD templates | ✅ 33 adopters (Rust + Python + Node) |
 | devkit | Developer tooling | ✅ Active |
 | pulse | Ecosystem monitoring | ✅ Enhanced |
 
@@ -120,6 +130,6 @@ Latest scan (2026-02-18):
 ## Next Actions
 
 1. **serde_yml rewrite** - Eliminate 151 vulnerabilities (P0)
-2. **Python audit** - ✅ 7/8 repos migrated (pain001 already at standard)
-3. **JavaScript/TypeScript** - Migrate repos to pipelines node-ci.yml
+2. **Python audit** - ✅ Complete (7/8 repos migrated, pain001 already at standard)
+3. **JavaScript/TypeScript** - ✅ Complete (3 repos migrated)
 4. **Pulse dashboards** - Add Grafana visualizations
