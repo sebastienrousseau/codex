@@ -49,6 +49,17 @@ codex/
 └── README.md                # This file
 ```
 
+## Ecosystem Status
+
+See [status/ecosystem-enhancement-2026-02.md](status/ecosystem-enhancement-2026-02.md) for current enhancement progress.
+
+| Phase | Status |
+|-------|--------|
+| Foundation (CI/CD, Security) | ✅ Complete |
+| Quality (Linting, Coverage) | ✅ Complete |
+| serde_yml Rewrite | 📋 Planned |
+| Python Audit | ⏳ Pending |
+
 ## Quick Links
 
 ### Architecture Decision Records
@@ -58,6 +69,7 @@ codex/
 - [ADR-002: Testing Strategy](adrs/002-testing-strategy.md) - Testing approach
 - [ADR-003: Versioning Strategy](adrs/003-versioning-strategy.md) - Semantic versioning
 - [ADR-004: Dependency Management](adrs/004-dependency-management.md) - Dependency practices
+- [ADR-005: serde_yml Rewrite](adrs/005-serde-yml-rewrite.md) - Safe YAML library
 
 ### Coding Standards
 
